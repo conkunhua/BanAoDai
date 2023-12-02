@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace MyClass.Model
 {
@@ -23,6 +24,10 @@ namespace MyClass.Model
         public string Name { get; set; }
         public string Slug { get; set; }
         public string Img { get; set; }
+
+        [Required(ErrorMessage = "Mục này không để trống !")]
+        [AllowHtml]
+        public string MetaDescription { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }

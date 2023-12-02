@@ -1,4 +1,4 @@
-﻿@model MyClass.Model.Category
+﻿@model MyClass.Model.Brand
 
 @{
     ViewBag.Title = "Delete";
@@ -28,13 +28,7 @@
             @Html.DisplayFor(model => model.Slug)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ParentId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ParentId)
-        </dd>
+       
 
         <dt>
             @Html.DisplayNameFor(model => model.Orders)
@@ -52,13 +46,7 @@
             @Html.DisplayFor(model => model.MetaDescription)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SeoKeyword)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SeoKeyword)
-        </dd>
+        
 
         <dt>
             @Html.DisplayNameFor(model => model.CreatedBy)

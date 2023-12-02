@@ -1,107 +1,103 @@
-﻿@model MyClass.Model.Category
+﻿@model MyClass.Model.Brand
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết Thương hiệu";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Chi tiết Thương hiệu</h2>
 
-<div>
-    <h4>Category</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+<section class="content">
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+    <!-- Default box -->
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-6">
+                    <strong class="text-danger">
+                        Chi tiết Thương Hiệu
+                    </strong>
+                </div>
+                <div class="col-md-6 text-right">
+                    @*<a href="@Url.Action("Edit","Menu")" class="btn btn-sm btn-success"><i class="fas fa-tools"></i> Sửa</a>*@
+                    <a href="@Url.Action("Index","Menu")" class="btn btn-sm btn-success">
+                        <i class="fas fa fa-arrow-circle-left"></i> Quay lại
+                    </a>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Slug)
-        </dt>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Tên Thương Hiệu</th>
+                                <th>Hình ảnh</th>
+                                <th>Slug</th>
+                                <th>Số Điện thoại</th>
+                                <th>Địa Chỉ</th>
+                                <th>Email</th>
+                                <th>Mô tả</th>
+                                <th>CreatedBy</th>
+                                <th>CreatedBy_At</th>
+                                <th>UpdatedBy</th>
+                                <th>UpdatedAt</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.Name)
+                                </td>
+                                <td>
+                                    <img width="100" height="100" src="~/Public/images/@Model.Img" class="img-fluid" />
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.Slug)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.Phone)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.Address)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.MetaDescription)
+                                </td>
 
-        <dd>
-            @Html.DisplayFor(model => model.Slug)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ParentId)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ParentId)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Orders)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Orders)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MetaDescription)
-        </dt>
+                                <td>
+                                    @Html.DisplayFor(model => model.CreatedBy)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.CreatedBy_At)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.UpdatedBy)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.UpdatedAt)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.Status)
+                                </td>
 
-        <dd>
-            @Html.DisplayFor(model => model.MetaDescription)
-        </dd>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SeoKeyword)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SeoKeyword)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </dt>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <dd>
-            @Html.DisplayFor(model => model.CreatedBy)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedBy_At)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedBy_At)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UpdatedBy)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UpdatedBy)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UpdatedAt)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UpdatedAt)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

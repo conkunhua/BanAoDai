@@ -3011,6 +3011,14 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Uploads\files\2.jpg" />
+    <Content Include="Uploads\files\7.jpg" />
+    <Content Include="Uploads\files\ah phi ogong.jpg" />
+    <Content Include="Uploads\files\banner_1.jpg" />
+    <Content Include="Uploads\_thumbs\Files\2.jpg" />
+    <Content Include="Uploads\_thumbs\Files\7.jpg" />
+    <Content Include="Uploads\_thumbs\Files\ah phi ogong.jpg" />
+    <Content Include="Uploads\_thumbs\Files\banner_1.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -3331,6 +3339,7 @@
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Content\ckfinder\ckfinder\userfiles\" />
     <Folder Include="Public\jss\" />
+    <Folder Include="Uploads\images\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyClass\MyClass.csproj">

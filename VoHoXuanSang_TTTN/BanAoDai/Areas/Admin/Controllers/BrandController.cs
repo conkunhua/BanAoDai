@@ -41,8 +41,8 @@ namespace BanAoDai.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            ViewBag.ListCatId = new SelectList(db.Brands.Where(x => x.Status != 0).ToList(), "Id", "Name");
-            ViewBag.ListOrder = new SelectList(db.Brands.Where(x => x.Status != 0).ToList(), "Orders", "Name");
+            ViewBag.ListCatId = new SelectList(db.Categorys.Where(x => x.Status != 0).ToList(), "Id", "Name");
+            ViewBag.ListOrder = new SelectList(db.Categorys.Where(x => x.Status != 0).ToList(), "Orders", "Name");
             return View();
         }
 

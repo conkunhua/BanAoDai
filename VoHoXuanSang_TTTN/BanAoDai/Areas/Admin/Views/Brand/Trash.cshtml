@@ -1,7 +1,7 @@
-﻿@model IEnumerable<MyClass.Model.Category>
+﻿@model IEnumerable<MyClass.Model.Brand>
 
 @{
-    ViewBag.Title = "Thùng rác danh mục đã xóa";
+    ViewBag.Title = "Thùng rác Thương Hiệu đã xóa";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 <section class="content">
@@ -12,11 +12,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <strong class="text-danger">
-                       Thùng Rác Danh Mục Sản Phẩm
+                       Thùng Rác Thương Hiệu Sản Phẩm
                     </strong>
                 </div>
                 <div class="col-md-6 text-right">
-                    <a href="@Url.Action("Index","Category")" class="btn btn-sm btn-info">
+                    <a href="@Url.Action("Index","Brand")" class="btn btn-sm btn-info">
                     <i class="fas fa fa-arrow-circle-left"></i> Quay về</a>
                     
                 </div>
@@ -27,7 +27,7 @@
             <table class="table table-bordered">
                 <tr>
                     <td style="width:20px;" class="text-center">#</td>
-                    <td style="width:20px;" class="text-center">Tên Danh Mục</td>
+                    <td style="width:20px;" class="text-center">Tên Thương Hiệu</td>
                     <td style="width:20px;" class="text-center">Slug</td>
                     <td style="width:160px;" class="text-center">Ngày Tạo</td>
                     <td style="width:200px;" class="text-center">Chức Năng</td>
@@ -43,18 +43,18 @@
                         <td class="text-center">@item.Slug</td>
                         <td class="text-center">@item.CreatedBy_At</td>
                         <td class="text-center">
-                            @if (item.Status == 1)
+                            @*@if (item.Status == 1)
                             {
-                                <a href="@Url.Action("Edit","Category", new {id=item.Id})" class="btn btn-sm btn-success"><i class="fas fa-toggle-on"></i></a>
+                                <a href="@Url.Action("Edit","Brand", new {id=item.Id})" class="btn btn-sm btn-success"><i class="fas fa-toggle-on"></i></a>
                             }
                             else
                             {
-                                <a href="@Url.Action("Edit","Category", new {id=item.Id})" class="btn btn-sm btn-danger"><i class="fas fa-toggle-off"></i></a>
-                            }
+                                <a href="@Url.Action("Edit","Brand", new {id=item.Id})" class="btn btn-sm btn-danger"><i class="fas fa-toggle-off"></i></a>
+                            }*@
 
                             
-                            <a href="@Url.Action("Restore","Category", new { id=item.Id })" class="btn btn-sm btn-info"><i class="fas fa-undo"></i> Phục hồi</a>
-                            <a href="@Url.Action("Destroy","Category", new {id=item.Id})" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Xóa</a>
+                            <a href="@Url.Action("Restore","Brand", new { id=item.Id })" class="btn btn-sm btn-info"><i class="fas fa-undo"></i> Phục hồi</a>
+                            <a href="@Url.Action("Destroy","Brand", new {id=item.Id})" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Xóa</a>
                         </td>
                         <td class="text-center">@item.Id</td>
                     </tr>
@@ -63,7 +63,7 @@
         </div>
         <!-- /.card-body -->
         <div class="card-footer text-right">
-            <a href="@Url.Action("Index","Category")" class="btn btn-sm btn-info">
+            <a href="@Url.Action("Index","Brand")" class="btn btn-sm btn-info">
                 <i class="fas fa fa-arrow-circle-left"></i> Quay về
             </a>
         </div>
